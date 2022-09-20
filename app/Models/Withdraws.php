@@ -13,4 +13,8 @@ class Withdraws extends Model
         'rekening',
         'total'
     ];
+
+    public function rekening(){
+        return $this->hasOne(User::class,'rekening' , 'rekening');
+    }
 }

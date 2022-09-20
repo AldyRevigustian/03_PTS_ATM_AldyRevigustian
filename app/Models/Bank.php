@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Moneys extends Model
+class Bank extends Model
 {
     use HasFactory;
 
@@ -13,4 +13,9 @@ class Moneys extends Model
         'rekening',
         'money'
     ];
+
+    public function rekening(){
+        return $this->hasOne(User::class,'rekening' , 'rekening');
+    }
+
 }

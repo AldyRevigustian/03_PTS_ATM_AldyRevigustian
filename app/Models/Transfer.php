@@ -14,4 +14,5 @@ class Transfer extends Model
         'to_rekening',
         'total'
     ];
+
 }

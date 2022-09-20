@@ -12,7 +12,11 @@ class Payments extends Model
     protected $fillable = [
         'rekening',
         'type',
-        'no_payments',
+        'no_payment',
         'total'
     ];
+
+    public function rekening(){
+        return $this->hasOne(User::class,'rekening' ,'rekening');
+    }
 }

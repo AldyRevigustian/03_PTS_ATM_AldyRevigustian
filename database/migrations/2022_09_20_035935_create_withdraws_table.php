@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('withdraws', function (Blueprint $table) {
             $table->id();
-            $table->integer('rekening');
+            $table->integer('rekening')->constrained();
             $table->integer('total');
             $table->timestamps();
         });

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->integer('rekening');
             $table->enum('type', ['pulsa', 'listrik']);
-            $table->integer('no_payment');
+            $table->string('no_payment');
             $table->integer('total');
             $table->timestamps();
         });
